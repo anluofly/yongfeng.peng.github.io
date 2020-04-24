@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="js工具函数switch实现 数组+索引 123function previewWeek(i) &amp;#123;  return  i &amp;gt; 0 &amp;amp;&amp;amp; i &amp;lt; 8 ? &amp;apos;星期&amp;apos;+[&amp;apos;一&amp;apos;,&amp;apos;二&amp;apos;,&amp;apos;三&amp;apos;,&amp;apos;四&amp;apos;,&amp;apos;五&amp;apos;,&amp;apos;六&amp;apos;,&amp;apos">
+<meta name="description" content="js工具函数toFixed 精度高的用法1234function round(number, precision) &amp;#123;  return Math.round(+number + &amp;apos;e&amp;apos; + precision) / Math.pow(10, precision);&amp;#125;* 注意整数使用toFixed 写法需要括号(6).toFixed(2) switch实现 数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="工具函数">
 <meta property="og:url" content="http://yoursite.com/2019/07/05/工具函数/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="js工具函数switch实现 数组+索引 123function previewWeek(i) &amp;#123;  return  i &amp;gt; 0 &amp;amp;&amp;amp; i &amp;lt; 8 ? &amp;apos;星期&amp;apos;+[&amp;apos;一&amp;apos;,&amp;apos;二&amp;apos;,&amp;apos;三&amp;apos;,&amp;apos;四&amp;apos;,&amp;apos;五&amp;apos;,&amp;apos;六&amp;apos;,&amp;apos">
+<meta property="og:description" content="js工具函数toFixed 精度高的用法1234function round(number, precision) &amp;#123;  return Math.round(+number + &amp;apos;e&amp;apos; + precision) / Math.pow(10, precision);&amp;#125;* 注意整数使用toFixed 写法需要括号(6).toFixed(2) switch实现 数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-22T07:48:30.342Z">
+<meta property="og:updated_time" content="2020-04-23T02:49:23.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工具函数">
-<meta name="twitter:description" content="js工具函数switch实现 数组+索引 123function previewWeek(i) &amp;#123;  return  i &amp;gt; 0 &amp;amp;&amp;amp; i &amp;lt; 8 ? &amp;apos;星期&amp;apos;+[&amp;apos;一&amp;apos;,&amp;apos;二&amp;apos;,&amp;apos;三&amp;apos;,&amp;apos;四&amp;apos;,&amp;apos;五&amp;apos;,&amp;apos;六&amp;apos;,&amp;apos">
+<meta name="twitter:description" content="js工具函数toFixed 精度高的用法1234function round(number, precision) &amp;#123;  return Math.round(+number + &amp;apos;e&amp;apos; + precision) / Math.pow(10, precision);&amp;#125;* 注意整数使用toFixed 写法需要括号(6).toFixed(2) switch实现 数">
 
 
 
@@ -335,7 +335,8 @@
       
 
       
-        <h4 id="js工具函数"><a href="#js工具函数" class="headerlink" title="js工具函数"></a>js工具函数</h4><h5 id="switch实现"><a href="#switch实现" class="headerlink" title="switch实现"></a>switch实现</h5><ul>
+        <h4 id="js工具函数"><a href="#js工具函数" class="headerlink" title="js工具函数"></a>js工具函数</h4><h5 id="toFixed-精度高的用法"><a href="#toFixed-精度高的用法" class="headerlink" title="toFixed 精度高的用法"></a>toFixed 精度高的用法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function round(number, precision) &#123;</span><br><span class="line">  return Math.round(+number + &apos;e&apos; + precision) / Math.pow(10, precision);</span><br><span class="line">&#125;</span><br><span class="line">* 注意整数使用toFixed 写法需要括号(6).toFixed(2)</span><br></pre></td></tr></table></figure>
+<h5 id="switch实现"><a href="#switch实现" class="headerlink" title="switch实现"></a>switch实现</h5><ul>
 <li><p>数组+索引</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function previewWeek(i) &#123;</span><br><span class="line">  return  i &gt; 0 &amp;&amp; i &lt; 8 ? &apos;星期&apos;+[&apos;一&apos;,&apos;二&apos;,&apos;三&apos;,&apos;四&apos;,&apos;五&apos;,&apos;六&apos;,&apos;日&apos;][i-1] : &apos;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -490,7 +491,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -545,7 +546,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#js工具函数"><span class="nav-number">1.</span> <span class="nav-text">js工具函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#switch实现"><span class="nav-number">1.1.</span> <span class="nav-text">switch实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#过滤数组中的false"><span class="nav-number">1.2.</span> <span class="nav-text">过滤数组中的false</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建一个纯净的空对象"><span class="nav-number">1.3.</span> <span class="nav-text">创建一个纯净的空对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#合并对象"><span class="nav-number">1.4.</span> <span class="nav-text">合并对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解构赋值使用别名"><span class="nav-number">1.5.</span> <span class="nav-text">解构赋值使用别名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组map方法，抽离数组对象中的某个属性"><span class="nav-number">1.6.</span> <span class="nav-text">数组map方法，抽离数组对象中的某个属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#有条件的对象属性"><span class="nav-number">1.7.</span> <span class="nav-text">有条件的对象属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#公用的正则表达式"><span class="nav-number">1.8.</span> <span class="nav-text">公用的正则表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript常见错误"><span class="nav-number">1.9.</span> <span class="nav-text">JavaScript常见错误</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#js工具函数"><span class="nav-number">1.</span> <span class="nav-text">js工具函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#toFixed-精度高的用法"><span class="nav-number">1.1.</span> <span class="nav-text">toFixed 精度高的用法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#switch实现"><span class="nav-number">1.2.</span> <span class="nav-text">switch实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#过滤数组中的false"><span class="nav-number">1.3.</span> <span class="nav-text">过滤数组中的false</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建一个纯净的空对象"><span class="nav-number">1.4.</span> <span class="nav-text">创建一个纯净的空对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#合并对象"><span class="nav-number">1.5.</span> <span class="nav-text">合并对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解构赋值使用别名"><span class="nav-number">1.6.</span> <span class="nav-text">解构赋值使用别名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组map方法，抽离数组对象中的某个属性"><span class="nav-number">1.7.</span> <span class="nav-text">数组map方法，抽离数组对象中的某个属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#有条件的对象属性"><span class="nav-number">1.8.</span> <span class="nav-text">有条件的对象属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#公用的正则表达式"><span class="nav-number">1.9.</span> <span class="nav-text">公用的正则表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript常见错误"><span class="nav-number">1.10.</span> <span class="nav-text">JavaScript常见错误</span></a></li></ol></li></ol></div>
             
 
           </div>
