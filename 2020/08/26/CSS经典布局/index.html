@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="一行代码实现（主要基于flex、grid布局）,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="webpack有哪些常见 loader 和 plugin，你用过哪些？ loader file-loader：把文件输出到一个文件夹中，在代码中通过相对 URL 去引用输出的文件 url-loader：和 file-loader 类似，但是能在文件很小的情况下以 base64 的方式把文件内容注入到代码中去 source-map-loader：加载额外的 Source Map 文件，以方便断点调试">
+<meta name="description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
+<meta name="keywords" content="一行代码实现（主要基于flex、grid布局）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack">
-<meta property="og:url" content="http://yoursite.com/2019/05/06/webpack/index.html">
+<meta property="og:title" content="CSS经典布局">
+<meta property="og:url" content="http://yoursite.com/2020/08/26/CSS经典布局/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="webpack有哪些常见 loader 和 plugin，你用过哪些？ loader file-loader：把文件输出到一个文件夹中，在代码中通过相对 URL 去引用输出的文件 url-loader：和 file-loader 类似，但是能在文件很小的情况下以 base64 的方式把文件内容注入到代码中去 source-map-loader：加载额外的 Source Map 文件，以方便断点调试">
+<meta property="og:description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-06T14:07:39.634Z">
+<meta property="og:updated_time" content="2020-08-26T07:43:19.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack">
-<meta name="twitter:description" content="webpack有哪些常见 loader 和 plugin，你用过哪些？ loader file-loader：把文件输出到一个文件夹中，在代码中通过相对 URL 去引用输出的文件 url-loader：和 file-loader 类似，但是能在文件很小的情况下以 base64 的方式把文件内容注入到代码中去 source-map-loader：加载额外的 Source Map 文件，以方便断点调试">
+<meta name="twitter:title" content="CSS经典布局">
+<meta name="twitter:description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/06/webpack/">
+  <link rel="canonical" href="http://yoursite.com/2020/08/26/CSS经典布局/">
 
 
 
 
 
-  <title>webpack | Shero.</title>
+  <title>CSS经典布局 | Shero.</title>
   
 
 
@@ -268,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/06/webpack/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/CSS经典布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongfeng.peng">
@@ -285,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webpack</h1>
+          <h1 class="post-title" itemprop="name headline">CSS经典布局</h1>
         
 
         <div class="post-meta">
@@ -297,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T22:00:00+08:00">
-                2019-05-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-26T14:39:21+08:00">
+                2020-08-26
               </time>
             
 
@@ -335,50 +336,35 @@
       
 
       
-        <h4 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h4><h5 id="有哪些常见-loader-和-plugin，你用过哪些？"><a href="#有哪些常见-loader-和-plugin，你用过哪些？" class="headerlink" title="有哪些常见 loader 和 plugin，你用过哪些？"></a>有哪些常见 loader 和 plugin，你用过哪些？</h5><ol>
-<li>loader<ul>
-<li>file-loader：把文件输出到一个文件夹中，在代码中通过相对 URL 去引用输出的文件</li>
-<li>url-loader：和 file-loader 类似，但是能在文件很小的情况下以 base64 的方式把文件内容注入到代码中去</li>
-<li>source-map-loader：加载额外的 Source Map 文件，以方便断点调试</li>
-<li>image-loader：加载并且压缩图片文件</li>
-<li>babel-loader：把 ES6 转换成 ES5</li>
-<li>css-loader：加载 CSS，支持模块化、压缩、文件导入等特性</li>
-<li>style-loader：把 CSS 代码注入到 JavaScript 中，通过 DOM 操作去加载 CSS。</li>
-<li>eslint-loader：通过 ESLint 检查 JavaScript 代码</li>
+        <h4 id="CSS经典布局"><a href="#CSS经典布局" class="headerlink" title="CSS经典布局"></a>CSS经典布局</h4><h5 id="空间居中对齐"><a href="#空间居中对齐" class="headerlink" title="空间居中对齐"></a>空间居中对齐</h5><ul>
+<li>空间居中布局指的是，不管容器的大小，项目总是占据中心点。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  place-items: center/end/start;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* place-items: &lt;align-items&gt; &lt;justify-items&gt;; */</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<h5 id="并列式布局"><a href="#并列式布局" class="headerlink" title="并列式布局"></a>并列式布局</h5><ul>
+<li><p>并列式布局就是多个项目并列。如果宽度不够，放不下的项目就自动折行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-wrap: wrap;</span><br><span class="line">  justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line">.item&#123;</span><br><span class="line">  flex: 0 1 150px;</span><br><span class="line">  margin: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>plugin<ul>
-<li>define-plugin：定义环境变量</li>
-<li>commons-chunk-plugin：提取公共代码</li>
-<li>uglifyjs-webpack-plugin：通过UglifyES压缩ES6代码</li>
+<li><p>flex属性是flex-grow、flex-shrink、flex-basis这三个属性的简写形式。</p>
+</li>
+<li>flex: <flex-grow> <flex-shrink> <flex-basis>;<ul>
+<li>flex-basis：项目的初始宽度。</li>
+<li>flex-grow：指定如果有多余宽度，项目是否可以扩大。</li>
+<li>flex-shrink：指定如果宽度不足，项目是否可以缩小。</li>
+<li>flex: 0 1 150px;的意思就是，项目的初始宽度是150px，且不可以扩大，但是当容器宽度不足150px时，项目可以缩小。</li>
 </ul>
-</li>
-</ol>
-<h5 id="loader-和-plugin-的区别是什么？"><a href="#loader-和-plugin-的区别是什么？" class="headerlink" title="loader 和 plugin 的区别是什么？"></a>loader 和 plugin 的区别是什么？</h5><ol>
-<li>不同的作用<ul>
-<li>Loader直译为”加载器”。Webpack将一切文件视为模块，但是webpack原生是只能解析js文件，如果想将其他文件也打包的话，就会用到loader。 所以Loader的作用是让webpack拥有了加载和解析非JavaScript文件的能力。<br>Plugin直译为”插件”。Plugin可以扩展webpack的功能，让webpack具有更多的灵活性。 在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。</li>
+</flex-basis></flex-shrink></flex-grow></li>
+<li>如果写成flex: 1 1 150px;，就表示项目始终会占满所有宽度</li>
 </ul>
+<h5 id="两栏式布局"><a href="#两栏式布局" class="headerlink" title="两栏式布局"></a>两栏式布局</h5><ul>
+<li>两栏式布局就是一个边栏，一个主栏。</li>
+<li>边栏始终存在，主栏根据设备宽度，变宽或者变窄。如果希望主栏自动换到下一行，可以参考上面的”并列式布局”。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: minmax(150px, 25%) 1fr;</span><br><span class="line">&#125;</span><br><span class="line">/* grid-template-columns指定页面分成两列。第一列的宽度是minmax(150px, 25%)，即最小宽度为150px，最大宽度为总宽度的25%；第二列为1fr，即所有剩余宽度。 */</span><br></pre></td></tr></table></figure>
 </li>
-<li>不同的用法<ul>
-<li>Loader在module.rules中配置，也就是说他作为模块的解析规则而存在。 类型为数组，每一项都是一个Object，里面描述了对于什么类型的文件（test），使用什么加载(loader)和使用的参数（options）<br>Plugin在plugins中单独配置。 类型为数组，每一项是一个plugin的实例，参数都通过构造函数传入。</li>
 </ul>
+<h5 id="三明治布局"><a href="#三明治布局" class="headerlink" title="三明治布局"></a>三明治布局</h5><ul>
+<li>三明治布局指的是，页面在垂直方向上，分成三部分：页眉、内容区、页脚。</li>
+<li>这个布局会根据设备宽度，自动适应，并且不管内容区有多少内容，页脚始终在容器底部（粘性页脚）。也就是说，这个布局总是会占满整个页面高度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-rows: auto 1fr auto;</span><br><span class="line">&#125;</span><br><span class="line">/* 指定采用 Grid 布局。核心代码是grid-template-rows那一行，指定垂直高度怎么划分，这里是从上到下分成三部分。第一部分（页眉）和第三部分（页脚）的高度都为auto，即本来的内容高度；第二部分（内容区）的高度为1fr，即剩余的所有高度，这可以保证页脚始终在容器的底部。 */</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<h5 id="如何按需加载代码？"><a href="#如何按需加载代码？" class="headerlink" title="如何按需加载代码？"></a>如何按需加载代码？</h5><ol>
-<li><p>Vue UI组件库的按需加载 为了快速开发前端项目，经常会引入现成的UI组件库如ElementUI、iView等，但是他们的体积和他们所提供的功能一样，是很庞大的。 而通常情况下，我们仅仅需要少量的几个组件就足够了，但是我们却将庞大的组件库打包到我们的源码中，造成了不必要的开销。<br>不过很多组件库已经提供了现成的解决方案，如Element出品的babel-plugin-component和AntDesign出品的babel-plugin-import 安装以上插件后，在.babelrc配置中或babel-loader的参数中进行设置，即可实现组件按需加载了。</p>
-</li>
-<li><p>单页应用的按需加载 现在很多前端项目都是通过单页应用的方式开发的，但是随着业务的不断扩展，会面临一个严峻的问题——首次加载的代码量会越来越多，影响用户的体验。<br>通过import(<em>)语句来控制加载时机，webpack内置了对于import(</em>)的解析，会将import(<em>)中引入的模块作为一个新的入口在生成一个chunk。 当代码执行到import(</em>)语句时，会去加载Chunk对应生成的文件。import()会返回一个Promise对象，所以为了让浏览器支持，需要事先注入Promise polyfill</p>
-</li>
-</ol>
-<h5 id="如何提高构建速度？"><a href="#如何提高构建速度？" class="headerlink" title="如何提高构建速度？"></a>如何提高构建速度？</h5><ol>
-<li>多入口情况下，使用CommonsChunkPlugin来提取公共代码</li>
-<li>通过externals配置来提取常用库</li>
-<li>利用DllPlugin和DllReferencePlugin预编译资源模块 通过DllPlugin来对那些我们引用但是绝对不会修改的npm包来进行预编译，再通过DllReferencePlugin将预编译的模块加载进来。</li>
-<li>使用Happypack 实现多线程加速编译</li>
-<li>使用webpack-uglify-parallel来提升uglifyPlugin的压缩速度。 原理上webpack-uglify-parallel采用了多核并行压缩来提升压缩速度</li>
-<li>使用Tree-shaking和Scope Hoisting来剔除多余代码</li>
-</ol>
-<h5 id="转义出的文件过大怎么办？"><a href="#转义出的文件过大怎么办？" class="headerlink" title="转义出的文件过大怎么办？"></a>转义出的文件过大怎么办？</h5><p><a href="https://zhuanlan.zhihu.com/p/44438844" style="color: blue" target="_blank" rel="noopener">更多资源</a></p>
+</ul>
 
       
     </div>
@@ -394,6 +380,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/一行代码实现（主要基于flex、grid布局）/" rel="tag"># 一行代码实现（主要基于flex、grid布局）</a>
+          
+        </div>
+      
 
       
       
@@ -403,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/06/http/" rel="next" title="HTTP协议与安全">
-                <i class="fa fa-chevron-left"></i> HTTP协议与安全
+              <a href="/2020/04/28/数组去重/" rel="next" title="简单的函数方法">
+                <i class="fa fa-chevron-left"></i> 简单的函数方法
               </a>
             
           </div>
@@ -412,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/03/小程序引入iconfont踩坑/" rel="prev" title="小程序引入iconfont踩坑">
-                小程序引入iconfont踩坑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -549,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack"><span class="nav-number">1.</span> <span class="nav-text">webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#有哪些常见-loader-和-plugin，你用过哪些？"><span class="nav-number">1.1.</span> <span class="nav-text">有哪些常见 loader 和 plugin，你用过哪些？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#loader-和-plugin-的区别是什么？"><span class="nav-number">1.2.</span> <span class="nav-text">loader 和 plugin 的区别是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何按需加载代码？"><span class="nav-number">1.3.</span> <span class="nav-text">如何按需加载代码？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何提高构建速度？"><span class="nav-number">1.4.</span> <span class="nav-text">如何提高构建速度？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#转义出的文件过大怎么办？"><span class="nav-number">1.5.</span> <span class="nav-text">转义出的文件过大怎么办？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS经典布局"><span class="nav-number">1.</span> <span class="nav-text">CSS经典布局</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#空间居中对齐"><span class="nav-number">1.1.</span> <span class="nav-text">空间居中对齐</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#并列式布局"><span class="nav-number">1.2.</span> <span class="nav-text">并列式布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#两栏式布局"><span class="nav-number">1.3.</span> <span class="nav-text">两栏式布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三明治布局"><span class="nav-number">1.4.</span> <span class="nav-text">三明治布局</span></a></li></ol></li></ol></div>
             
 
           </div>
