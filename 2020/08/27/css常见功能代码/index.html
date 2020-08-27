@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="css常见的效果实现,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="命令窗口，使用快捷键快速跳转 新建一个文件目录，mkdir ~/repos 切换目录 cd ~/repos 克隆 git clone https://github.com/rupa/z.git 新建bashrc文件，如果已经存在这个文件，可忽略这步，touch ~/.bashrc 打开bashrc文件，start ~/.bashrc 在文件里写入 12. ~/repos/z/z.shalias j">
+<meta name="description" content="CSS3 animation实现点点点loading动画1234567891011121314151617@supports (display:none) &amp;#123;  dot &amp;#123;    display: inline-block;     width: 3ch;    text-indent: -1ch;    vertical-align: bottom;     overflow">
+<meta name="keywords" content="css常见的效果实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="window下git bash 命令行实用技巧">
-<meta property="og:url" content="http://yoursite.com/2019/05/04/window-quick/index.html">
+<meta property="og:title" content="css常见功能代码">
+<meta property="og:url" content="http://yoursite.com/2020/08/27/css常见功能代码/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="命令窗口，使用快捷键快速跳转 新建一个文件目录，mkdir ~/repos 切换目录 cd ~/repos 克隆 git clone https://github.com/rupa/z.git 新建bashrc文件，如果已经存在这个文件，可忽略这步，touch ~/.bashrc 打开bashrc文件，start ~/.bashrc 在文件里写入 12. ~/repos/z/z.shalias j">
+<meta property="og:description" content="CSS3 animation实现点点点loading动画1234567891011121314151617@supports (display:none) &amp;#123;  dot &amp;#123;    display: inline-block;     width: 3ch;    text-indent: -1ch;    vertical-align: bottom;     overflow">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-04T13:46:41.989Z">
+<meta property="og:updated_time" content="2020-08-27T02:54:36.169Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="window下git bash 命令行实用技巧">
-<meta name="twitter:description" content="命令窗口，使用快捷键快速跳转 新建一个文件目录，mkdir ~/repos 切换目录 cd ~/repos 克隆 git clone https://github.com/rupa/z.git 新建bashrc文件，如果已经存在这个文件，可忽略这步，touch ~/.bashrc 打开bashrc文件，start ~/.bashrc 在文件里写入 12. ~/repos/z/z.shalias j">
+<meta name="twitter:title" content="css常见功能代码">
+<meta name="twitter:description" content="CSS3 animation实现点点点loading动画1234567891011121314151617@supports (display:none) &amp;#123;  dot &amp;#123;    display: inline-block;     width: 3ch;    text-indent: -1ch;    vertical-align: bottom;     overflow">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/04/window-quick/">
+  <link rel="canonical" href="http://yoursite.com/2020/08/27/css常见功能代码/">
 
 
 
 
 
-  <title>window下git bash 命令行实用技巧 | Shero.</title>
+  <title>css常见功能代码 | Shero.</title>
   
 
 
@@ -268,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/04/window-quick/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/css常见功能代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongfeng.peng">
@@ -285,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">window下git bash 命令行实用技巧</h1>
+          <h1 class="post-title" itemprop="name headline">css常见功能代码</h1>
         
 
         <div class="post-meta">
@@ -297,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-04T11:43:59+08:00">
-                2019-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-27T10:39:44+08:00">
+                2020-08-27
               </time>
             
 
@@ -335,21 +336,8 @@
       
 
       
-        <h4 id="命令窗口，使用快捷键快速跳转"><a href="#命令窗口，使用快捷键快速跳转" class="headerlink" title="命令窗口，使用快捷键快速跳转"></a>命令窗口，使用快捷键快速跳转</h4><ol>
-<li>新建一个文件目录，mkdir ~/repos</li>
-<li>切换目录 cd ~/repos</li>
-<li>克隆 git clone <a href="https://github.com/rupa/z.git" target="_blank" rel="noopener">https://github.com/rupa/z.git</a></li>
-<li>新建bashrc文件，如果<strong>已经存在这个文件，可忽略这步</strong>，touch ~/.bashrc</li>
-<li>打开bashrc文件，start ~/.bashrc</li>
-<li><p>在文件里写入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">. ~/repos/z/z.sh</span><br><span class="line">alias j=&apos;z&apos;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启 Git Bash</p>
-</li>
-<li>验证你的配置，使用 j XXX 就可以快速到达之前去过的目录了</li>
-<li>使用 j 可以查看所有去过的目录，使用z也可以调整目录，调整目录名都可以不用写文件名全称，如：d/document 使用快速调整 z doc 或 j doc<br> <strong>注意，~/repos/z/z.sh 不能删除，删除了就不能用了</strong></li>
-</ol>
-
+        <h5 id="CSS3-animation实现点点点loading动画"><a href="#CSS3-animation实现点点点loading动画" class="headerlink" title="CSS3 animation实现点点点loading动画"></a>CSS3 animation实现点点点loading动画</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@supports (display:none) &#123;</span><br><span class="line">  dot &#123;</span><br><span class="line">    display: inline-block; </span><br><span class="line">    width: 3ch;</span><br><span class="line">    text-indent: -1ch;</span><br><span class="line">    vertical-align: bottom; </span><br><span class="line">    overflow: hidden;</span><br><span class="line">    animation: dot 3s infinite step-start both;</span><br><span class="line">    font-family: Consolas, Monaco, monospace;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@keyframes dot &#123;</span><br><span class="line">  33% &#123; text-indent: 0; &#125;</span><br><span class="line">  66% &#123; text-indent: -2ch; &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;a href=&quot;javascript:&quot; class=&quot;grebtn&quot;&gt;订单提交中&lt;dot&gt;...&lt;/dot&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="按钮加一个类名自动变菊花loading状态无图片版"><a href="#按钮加一个类名自动变菊花loading状态无图片版" class="headerlink" title="按钮加一个类名自动变菊花loading状态无图片版"></a>按钮加一个类名自动变菊花loading状态无图片版</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">/* 按钮loading */</span><br><span class="line">a[class*=-btn].loading, </span><br><span class="line">label[class*=-btn].loading &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">a[class*=-btn].loading::first-line, </span><br><span class="line">label[class*=-btn].loading::first-line &#123;</span><br><span class="line">  color: transparent;</span><br><span class="line">&#125;</span><br><span class="line">a[class*=-btn].loading::before, </span><br><span class="line">label[class*=-btn].loading::before &#123;</span><br><span class="line">  width: 4px; height: 4px;</span><br><span class="line">  margin: auto;</span><br><span class="line">  content: &apos;&apos;;</span><br><span class="line">  -webkit-animation: spinZoom 1s steps(8) infinite;</span><br><span class="line">  animation: spinZoom 1s steps(8) infinite;</span><br><span class="line">  border-radius: 100%;</span><br><span class="line">  box-shadow: 0 -10px 0 1px currentColor, 10px 0 currentColor, 0 10px currentColor, -10px 0 currentColor, -7px -7px 0 .5px currentColor, 7px -7px 0 1.5px currentColor, 7px 7px currentColor, -7px 7px currentColor;</span><br><span class="line">  /* center */</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0; right: 0; bottom: 0; left: 0;</span><br><span class="line">&#125;</span><br><span class="line">/* loading动画 */</span><br><span class="line">@-webkit-keyframes spinZoom &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    -webkit-transform: scale(.75) rotate(0);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    -webkit-transform: scale(.75) rotate(360deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes spinZoom &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    transform: scale(.75) rotate(0);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    transform: scale(.75) rotate(360deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;button&gt;&lt;a class=&quot;a-btn loading&quot;&gt;&lt;/a&gt;3445&lt;/button&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -364,6 +352,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/css常见的效果实现/" rel="tag"># css常见的效果实现</a>
+          
+        </div>
+      
 
       
       
@@ -373,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/03/js-methods/" rel="next" title="js常使用的函数总结">
-                <i class="fa fa-chevron-left"></i> js常使用的函数总结
+              <a href="/2020/08/26/CSS经典布局/" rel="next" title="CSS经典布局">
+                <i class="fa fa-chevron-left"></i> CSS经典布局
               </a>
             
           </div>
@@ -382,10 +376,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/04/html-css/" rel="prev" title="HTML、CSS基础概念总结">
-                HTML、CSS基础概念总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令窗口，使用快捷键快速跳转"><span class="nav-number">1.</span> <span class="nav-text">命令窗口，使用快捷键快速跳转</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS3-animation实现点点点loading动画"><span class="nav-number">1.</span> <span class="nav-text">CSS3 animation实现点点点loading动画</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#按钮加一个类名自动变菊花loading状态无图片版"><span class="nav-number">2.</span> <span class="nav-text">按钮加一个类名自动变菊花loading状态无图片版</span></a></li></ol></div>
             
 
           </div>
