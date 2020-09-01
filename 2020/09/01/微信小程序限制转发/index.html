@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="一行代码实现（主要基于flex、grid布局）,">
+  <meta name="keywords" content="微信小程序实现限制用户转发,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
-<meta name="keywords" content="一行代码实现（主要基于flex、grid布局）">
+<meta name="description" content="义务场景 用户希望某个页面只能自己转发分享，不希望被别人再次分享出去限制用户转发需要解决两个问题： 关闭系统右上角菜单栏中的转发功能 调用微信 API：wx.hideShareMenu({ }) 关闭当前页面转发功能。   隐藏群聊会话中长按转发分享的功能  设置 withShareTicket 参数为 true ，即带有参数的转发卡片，即分享到群聊的小程序卡片，长按就不再有转发功能了。 1234">
+<meta name="keywords" content="微信小程序实现限制用户转发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS经典布局">
-<meta property="og:url" content="http://yoursite.com/2020/08/26/CSS经典布局/index.html">
+<meta property="og:title" content="微信小程序限制转发">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/微信小程序限制转发/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
+<meta property="og:description" content="义务场景 用户希望某个页面只能自己转发分享，不希望被别人再次分享出去限制用户转发需要解决两个问题： 关闭系统右上角菜单栏中的转发功能 调用微信 API：wx.hideShareMenu({ }) 关闭当前页面转发功能。   隐藏群聊会话中长按转发分享的功能  设置 withShareTicket 参数为 true ，即带有参数的转发卡片，即分享到群聊的小程序卡片，长按就不再有转发功能了。 1234">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-26T07:43:19.460Z">
+<meta property="og:updated_time" content="2020-09-01T03:48:11.904Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS经典布局">
-<meta name="twitter:description" content="CSS经典布局空间居中对齐 空间居中布局指的是，不管容器的大小，项目总是占据中心点。123456.container &amp;#123;  display: grid;  place-items: center/end/start;&amp;#125;/* place-items: &amp;lt;align-items&amp;gt; &amp;lt;justify-items&amp;gt;; */   并列式布局 并列式布局就是多个项目">
+<meta name="twitter:title" content="微信小程序限制转发">
+<meta name="twitter:description" content="义务场景 用户希望某个页面只能自己转发分享，不希望被别人再次分享出去限制用户转发需要解决两个问题： 关闭系统右上角菜单栏中的转发功能 调用微信 API：wx.hideShareMenu({ }) 关闭当前页面转发功能。   隐藏群聊会话中长按转发分享的功能  设置 withShareTicket 参数为 true ，即带有参数的转发卡片，即分享到群聊的小程序卡片，长按就不再有转发功能了。 1234">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/08/26/CSS经典布局/">
+  <link rel="canonical" href="http://yoursite.com/2020/09/01/微信小程序限制转发/">
 
 
 
 
 
-  <title>CSS经典布局 | Shero.</title>
+  <title>微信小程序限制转发 | Shero.</title>
   
 
 
@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/CSS经典布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/微信小程序限制转发/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongfeng.peng">
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CSS经典布局</h1>
+          <h1 class="post-title" itemprop="name headline">微信小程序限制转发</h1>
         
 
         <div class="post-meta">
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-26T14:39:21+08:00">
-                2020-08-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-01T11:35:18+08:00">
+                2020-09-01
               </time>
             
 
@@ -336,33 +336,22 @@
       
 
       
-        <h4 id="CSS经典布局"><a href="#CSS经典布局" class="headerlink" title="CSS经典布局"></a>CSS经典布局</h4><h5 id="空间居中对齐"><a href="#空间居中对齐" class="headerlink" title="空间居中对齐"></a>空间居中对齐</h5><ul>
-<li>空间居中布局指的是，不管容器的大小，项目总是占据中心点。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  place-items: center/end/start;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* place-items: &lt;align-items&gt; &lt;justify-items&gt;; */</span><br></pre></td></tr></table></figure>
+        <h4 id="义务场景"><a href="#义务场景" class="headerlink" title="义务场景"></a>义务场景</h4><ul>
+<li>用户希望某个页面<strong>只能自己</strong>转发分享，不希望被别人再次分享出去<h4 id="限制用户转发需要解决两个问题："><a href="#限制用户转发需要解决两个问题：" class="headerlink" title="限制用户转发需要解决两个问题："></a>限制用户转发需要解决两个问题：</h4></li>
+<li>关闭系统右上角菜单栏中的转发功能<ul>
+<li>调用微信 API：wx.hideShareMenu({ }) 关闭当前页面转发功能。</li>
+</ul>
+</li>
+<li><p>隐藏群聊会话中长按转发分享的功能</p>
+<ul>
+<li><p>设置 withShareTicket 参数为 true ，即带有参数的转发卡片，即分享到群聊的小程序卡片，长按就不再有转发功能了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">onShareAppMessage() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    title: &apos;分享标题&apos;,</span><br><span class="line">    path: &apos;分享路径（/pages/index/index）&apos;,</span><br><span class="line">    imageUrl: &apos;分享图片&apos;,</span><br><span class="line">    success: () =&gt; &#123;</span><br><span class="line">      wx.showShareMenu(&#123;</span><br><span class="line">        withShareTicket: true</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: () =&gt; &#123;&#125;,</span><br><span class="line">    complete: () =&gt; &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>只适用于分享到群聊，如果分享给个人用户，个人用户依然是可以通过长按小程序卡片来转发的，这就需要我们再做进一步检测，检测用户进入小程序的场景</p>
+</li>
+<li>用户从带 shareTicet 的小程序消息卡片打开小程序，进入场景值为 1044 ，可以通过判断场景值来判断用户是否通过群聊卡片打开<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 检测用户进入小程序的场景值</span><br><span class="line">if (options.scene == 1044) &#123;</span><br><span class="line">  return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="并列式布局"><a href="#并列式布局" class="headerlink" title="并列式布局"></a>并列式布局</h5><ul>
-<li><p>并列式布局就是多个项目并列。如果宽度不够，放不下的项目就自动折行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-wrap: wrap;</span><br><span class="line">  justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line">.item&#123;</span><br><span class="line">  flex: 0 1 150px;</span><br><span class="line">  margin: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>flex属性是flex-grow、flex-shrink、flex-basis这三个属性的简写形式。</p>
-</li>
-<li>flex: <flex-grow> <flex-shrink> <flex-basis>;<ul>
-<li>flex-basis：项目的初始宽度。</li>
-<li>flex-grow：指定如果有多余宽度，项目是否可以扩大。</li>
-<li>flex-shrink：指定如果宽度不足，项目是否可以缩小。</li>
-<li>flex: 0 1 150px;的意思就是，项目的初始宽度是150px，且不可以扩大，但是当容器宽度不足150px时，项目可以缩小。</li>
-</ul>
-</flex-basis></flex-shrink></flex-grow></li>
-<li>如果写成flex: 1 1 150px;，就表示项目始终会占满所有宽度</li>
-</ul>
-<h5 id="两栏式布局"><a href="#两栏式布局" class="headerlink" title="两栏式布局"></a>两栏式布局</h5><ul>
-<li>两栏式布局就是一个边栏，一个主栏。</li>
-<li>边栏始终存在，主栏根据设备宽度，变宽或者变窄。如果希望主栏自动换到下一行，可以参考上面的”并列式布局”。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: minmax(150px, 25%) 1fr;</span><br><span class="line">&#125;</span><br><span class="line">/* grid-template-columns指定页面分成两列。第一列的宽度是minmax(150px, 25%)，即最小宽度为150px，最大宽度为总宽度的25%；第二列为1fr，即所有剩余宽度。 */</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="三明治布局"><a href="#三明治布局" class="headerlink" title="三明治布局"></a>三明治布局</h5><ul>
-<li>三明治布局指的是，页面在垂直方向上，分成三部分：页眉、内容区、页脚。</li>
-<li>这个布局会根据设备宽度，自动适应，并且不管内容区有多少内容，页脚始终在容器底部（粘性页脚）。也就是说，这个布局总是会占满整个页面高度。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-rows: auto 1fr auto;</span><br><span class="line">&#125;</span><br><span class="line">/* 指定采用 Grid 布局。核心代码是grid-template-rows那一行，指定垂直高度怎么划分，这里是从上到下分成三部分。第一部分（页眉）和第三部分（页脚）的高度都为auto，即本来的内容高度；第二部分（内容区）的高度为1fr，即剩余的所有高度，这可以保证页脚始终在容器的底部。 */</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -382,7 +371,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/一行代码实现（主要基于flex、grid布局）/" rel="tag"># 一行代码实现（主要基于flex、grid布局）</a>
+            <a href="/tags/微信小程序实现限制用户转发/" rel="tag"># 微信小程序实现限制用户转发</a>
           
         </div>
       
@@ -395,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/28/数组去重/" rel="next" title="简单的函数方法">
-                <i class="fa fa-chevron-left"></i> 简单的函数方法
+              <a href="/2020/08/27/css常见功能代码/" rel="next" title="css常见功能代码">
+                <i class="fa fa-chevron-left"></i> css常见功能代码
               </a>
             
           </div>
@@ -404,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/27/css常见功能代码/" rel="prev" title="css常见功能代码">
-                css常见功能代码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS经典布局"><span class="nav-number">1.</span> <span class="nav-text">CSS经典布局</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#空间居中对齐"><span class="nav-number">1.1.</span> <span class="nav-text">空间居中对齐</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#并列式布局"><span class="nav-number">1.2.</span> <span class="nav-text">并列式布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#两栏式布局"><span class="nav-number">1.3.</span> <span class="nav-text">两栏式布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三明治布局"><span class="nav-number">1.4.</span> <span class="nav-text">三明治布局</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#义务场景"><span class="nav-number">1.</span> <span class="nav-text">义务场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#限制用户转发需要解决两个问题："><span class="nav-number">2.</span> <span class="nav-text">限制用户转发需要解决两个问题：</span></a></li></ol></div>
             
 
           </div>
