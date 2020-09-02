@@ -358,7 +358,7 @@
 <li>如果一个 wxs 模块在定义之后，一直没有被引用，则该模块不会被解析与运行</li>
 </ul>
 </li>
-<li>了解更多，参照小程序官方文档<ul>
+<li>了解更多，参照小程序官方文档(wxs是不同于js文件的。所以很多js的api是不支持的)<ul>
 <li><a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxs/" target="_blank" rel="noopener">To Learn More…</a></li>
 </ul>
 </li>
@@ -495,6 +495,14 @@
 </li>
 </ul>
 <h5 id="scroll-view隐藏滚动条方法"><a href="#scroll-view隐藏滚动条方法" class="headerlink" title="scroll-view隐藏滚动条方法"></a>scroll-view隐藏滚动条方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">::-webkit-scrollbar&#123;</span><br><span class="line">  width: 0;</span><br><span class="line">  height: 0;</span><br><span class="line">  color: transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="图片本地资源名称，尽量使用小写命名"><a href="#图片本地资源名称，尽量使用小写命名" class="headerlink" title="图片本地资源名称，尽量使用小写命名"></a>图片本地资源名称，尽量使用小写命名</h5><ul>
+<li><p>在解决iPhone X适配时，底部多余部分使用图片时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image class=&apos;iphonexImg&apos; src=&quot;/imgs/iphoneBGT.png&quot; mode=&quot;aspectFill&quot; /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>路径是 src=’imgs/iphoneBGT.png’(发现在pc IDE上面可以显示出来，但是真机调试时，图片找不到)，将图片名称改为iphonex.png真机调试就可以了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image class=&apos;iphonexImg&apos; src=&quot;/imgs/iphonex.png&quot; mode=&quot;aspectFill&quot; /&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
           
         
       

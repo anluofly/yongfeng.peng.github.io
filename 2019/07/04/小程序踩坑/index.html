@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Shero.">
 <meta property="og:description" content="容易忽视的小程序细节wx:for属性* 绑定一个数组，默认数组当前项的下标变量名为index，数组当前项默认为 item * 实质是遍历Array数组，但在开发中经常会遇到遍历**Object对象**,会使用在多层嵌套的循环中，不可避免的会重定义item与index 12wx:for-item=&amp;quot;xxx&amp;quot;wx:for-index=&amp;quot;xxx&amp;quot; 针对对象Obje">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-04T04:12:11.275Z">
+<meta property="og:updated_time" content="2020-09-02T02:59:45.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序踩坑">
 <meta name="twitter:description" content="容易忽视的小程序细节wx:for属性* 绑定一个数组，默认数组当前项的下标变量名为index，数组当前项默认为 item * 实质是遍历Array数组，但在开发中经常会遇到遍历**Object对象**,会使用在多层嵌套的循环中，不可避免的会重定义item与index 12wx:for-item=&amp;quot;xxx&amp;quot;wx:for-index=&amp;quot;xxx&amp;quot; 针对对象Obje">
@@ -351,6 +351,27 @@
 <li>微信小程序之Android环境下的横向滚动，当遇到不能滚动时，加上overflow-x: auto</li>
 </ul>
 <h5 id="wx-navigator-不可跳转到pages是底部tab"><a href="#wx-navigator-不可跳转到pages是底部tab" class="headerlink" title="wx.navigator 不可跳转到pages是底部tab"></a>wx.navigator 不可跳转到pages是底部tab</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.switchTab(&#123;</span><br><span class="line">    url: &apos;/pages/xxx/xxx&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="wx-getSystemInfoSync获取windowHeight不准确"><a href="#wx-getSystemInfoSync获取windowHeight不准确" class="headerlink" title="wx.getSystemInfoSync获取windowHeight不准确"></a>wx.getSystemInfoSync获取windowHeight不准确</h5><ul>
+<li>主要原因在于获取是时机，wx.getSystemInfoSync是在页面初始化的时候就计算了，基本上可以理解为是屏幕高度。所以，最好的方法是使用异步接口，并且在onReady函数中调用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">onReady() &#123;</span><br><span class="line">  wx.getSystemInfo(&#123;</span><br><span class="line">    success(&#123;windowHeight&#125;) &#123;</span><br><span class="line">      // todo</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="无法获取UnionID的问题"><a href="#无法获取UnionID的问题" class="headerlink" title="无法获取UnionID的问题"></a>无法获取UnionID的问题</h5><ul>
+<li>login获取UID必须满足两个条件：<ul>
+<li>把小程序和公众号都绑定在开放平台</li>
+<li>用户必须已经关注公众号</li>
+</ul>
+</li>
+<li>用wx.getUserInfo获取满足一个条件：<ul>
+<li>把小程序和公众号都绑定在开放平台</li>
+</ul>
+</li>
+</ul>
+<h5 id="wx-getUserInfo-接口更改问题"><a href="#wx-getUserInfo-接口更改问题" class="headerlink" title="wx.getUserInfo()接口更改问题"></a>wx.getUserInfo()接口更改问题</h5><p>*微信小程序最近被吐槽最多的一个更改，就是用户使用wx.getUserInfo（开发和体验版）时不会弹出授权，正式版不受影响。现在授权方式是需要引导用户点击一个授权按钮，然后再弹出授权。</p>
+<ul>
+<li>解法很长，请参考:</li>
+<li><a href="http://caibaojian.com/wx-getuserinfo.html" style="color: blue;" target="_blank" rel="noopener">微信小程序不支持wx.getUserInfo授权的解决方法</a></li>
+<li><a href="https://developers.weixin.qq.com/community/develop/doc/000aacd65388b86a44c69fd9a52804" style="color: blue;" target="_blank" rel="noopener">getUserInfo兼容解决方案</a></li>
+</ul>
 <ul>
 <li><a href="http://www.wxappclub.com/topic/596" style="color: blue;" target="_blank" rel="noopener">想了解more跳转</a></li>
 </ul>
@@ -524,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#容易忽视的小程序细节"><span class="nav-number">1.</span> <span class="nav-text">容易忽视的小程序细节</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-for属性"><span class="nav-number">1.1.</span> <span class="nav-text">wx:for属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scroll-view"><span class="nav-number">1.2.</span> <span class="nav-text">scroll-view</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-navigator-不可跳转到pages是底部tab"><span class="nav-number">1.3.</span> <span class="nav-text">wx.navigator 不可跳转到pages是底部tab</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#容易忽视的小程序细节"><span class="nav-number">1.</span> <span class="nav-text">容易忽视的小程序细节</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-for属性"><span class="nav-number">1.1.</span> <span class="nav-text">wx:for属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scroll-view"><span class="nav-number">1.2.</span> <span class="nav-text">scroll-view</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-navigator-不可跳转到pages是底部tab"><span class="nav-number">1.3.</span> <span class="nav-text">wx.navigator 不可跳转到pages是底部tab</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-getSystemInfoSync获取windowHeight不准确"><span class="nav-number">1.4.</span> <span class="nav-text">wx.getSystemInfoSync获取windowHeight不准确</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无法获取UnionID的问题"><span class="nav-number">1.5.</span> <span class="nav-text">无法获取UnionID的问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#wx-getUserInfo-接口更改问题"><span class="nav-number">1.6.</span> <span class="nav-text">wx.getUserInfo()接口更改问题</span></a></li></ol></li></ol></div>
             
 
           </div>
