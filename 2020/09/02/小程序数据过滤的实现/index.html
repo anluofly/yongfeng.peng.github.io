@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="微信小程序视图层实现filter过滤,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="新建blog hexo new 博客名称 本地预览 hexo s 新建页面 hexo new page “about” 提交发布 hexo generate hexo deploy (提交不上时， git config –global user.email/user.name, 删除根目录.deploy_git,重新执行指令)   结束，可以去看你的博客啦">
+<meta name="description" content="场景应用 微信小程序的wxml和js的内部实现机制是分开编译的，在wxml是没办法调用js的函数的。导致WXML缺少一个我们常用的功能，没有办法在视图层对数据进行格式化处理。 比如我们从后端获取到一个包含了时间戳数据的数组，需要在界面上把这些日期都格式化显示为2017-01-01这种格式的日期形式，在Vue, Angular之类的前端Web框架中，一般在视图层都提供了如filter之类相应比较好用">
+<meta name="keywords" content="微信小程序视图层实现filter过滤">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog">
-<meta property="og:url" content="http://yoursite.com/2019/07/03/blog/index.html">
+<meta property="og:title" content="小程序数据过滤的实现">
+<meta property="og:url" content="http://yoursite.com/2020/09/02/小程序数据过滤的实现/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="新建blog hexo new 博客名称 本地预览 hexo s 新建页面 hexo new page “about” 提交发布 hexo generate hexo deploy (提交不上时， git config –global user.email/user.name, 删除根目录.deploy_git,重新执行指令)   结束，可以去看你的博客啦">
+<meta property="og:description" content="场景应用 微信小程序的wxml和js的内部实现机制是分开编译的，在wxml是没办法调用js的函数的。导致WXML缺少一个我们常用的功能，没有办法在视图层对数据进行格式化处理。 比如我们从后端获取到一个包含了时间戳数据的数组，需要在界面上把这些日期都格式化显示为2017-01-01这种格式的日期形式，在Vue, Angular之类的前端Web框架中，一般在视图层都提供了如filter之类相应比较好用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-23T02:40:15.965Z">
+<meta property="og:updated_time" content="2020-09-02T02:45:14.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog">
-<meta name="twitter:description" content="新建blog hexo new 博客名称 本地预览 hexo s 新建页面 hexo new page “about” 提交发布 hexo generate hexo deploy (提交不上时， git config –global user.email/user.name, 删除根目录.deploy_git,重新执行指令)   结束，可以去看你的博客啦">
+<meta name="twitter:title" content="小程序数据过滤的实现">
+<meta name="twitter:description" content="场景应用 微信小程序的wxml和js的内部实现机制是分开编译的，在wxml是没办法调用js的函数的。导致WXML缺少一个我们常用的功能，没有办法在视图层对数据进行格式化处理。 比如我们从后端获取到一个包含了时间戳数据的数组，需要在界面上把这些日期都格式化显示为2017-01-01这种格式的日期形式，在Vue, Angular之类的前端Web框架中，一般在视图层都提供了如filter之类相应比较好用">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/03/blog/">
+  <link rel="canonical" href="http://yoursite.com/2020/09/02/小程序数据过滤的实现/">
 
 
 
 
 
-  <title>blog | Shero.</title>
+  <title>小程序数据过滤的实现 | Shero.</title>
   
 
 
@@ -268,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/03/blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/02/小程序数据过滤的实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongfeng.peng">
@@ -285,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">blog</h1>
+          <h1 class="post-title" itemprop="name headline">小程序数据过滤的实现</h1>
         
 
         <div class="post-meta">
@@ -297,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T17:21:26+08:00">
-                2019-07-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-02T10:30:42+08:00">
+                2020-09-02
               </time>
             
 
@@ -335,16 +336,29 @@
       
 
       
-        <h4 id="新建blog"><a href="#新建blog" class="headerlink" title="新建blog"></a>新建blog</h4><ul>
-<li>hexo new 博客名称</li>
-<li>本地预览 hexo s</li>
-<li>新建页面 hexo new page “about”</li>
-<li>提交发布<ul>
-<li>hexo generate</li>
-<li>hexo deploy (提交不上时， git config –global user.email/user.name, 删除根目录.deploy_git,重新执行指令)</li>
+        <h4 id="场景应用"><a href="#场景应用" class="headerlink" title="场景应用"></a>场景应用</h4><ul>
+<li>微信小程序的wxml和js的内部实现机制是分开编译的，在wxml是没办法调用js的函数的。导致WXML缺少一个我们常用的功能，没有办法在视图层对数据进行格式化处理。</li>
+<li>比如我们从后端获取到一个包含了时间戳数据的数组，需要在界面上把这些日期都格式化显示为2017-01-01这种格式的日期形式，在Vue, Angular之类的前端Web框架中，一般在视图层都提供了如filter之类相应比较好用的方案。微信小程序推出了wxs类型文件解决这类问题的</li>
+</ul>
+<h5 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h5><ul>
+<li><p>新建filter.wxs文件(一般作为公共方法存在)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var formatDate = function (timestamp, option) &#123;</span><br><span class="line">  var date = getDate(parseInt(timestamp));</span><br><span class="line">  var year = date.getFullYear();</span><br><span class="line">  var month = date.getMonth() + 1;</span><br><span class="line">  var day = date.getDate();</span><br><span class="line">  var hour = date.getHours();</span><br><span class="line">  var minute = date.getMinutes();</span><br><span class="line">  var second = date.getSeconds();</span><br><span class="line">  if (option == &apos;notime&apos;) &#123;  //不需要时间</span><br><span class="line">    return [year, month, day].map(formatNumber).join(&apos;-&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">  return [year, month, day].map(formatNumber).join(&apos;-&apos;) + &apos; &apos; + [hour, minute, second].map(formatNumber).join(&apos;:&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var formatNumber = function(n) &#123;</span><br><span class="line">  n = n.toString();</span><br><span class="line">  return n[1] ? n : &apos;0&apos; + n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  formatDate: formatDate,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在wxml文件中使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;wxs src=&apos;../../utils/filter.wxs&apos; module=&apos;filter&apos; /&gt;</span><br><span class="line">&lt;view&gt;日期：&#123;&#123;filter.formatDate(&apos;1599013002483&apos;)&#125;&#125;&lt;/view&gt;</span><br><span class="line">&lt;view&gt;日期：&#123;&#123;filter.formatDate(&apos;1599013002483&apos;, &apos;notime&apos;)&#125;&#125;&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="在-wxs模块中引用其他-wxs-文件模块，可以使用-require-函数"><a href="#在-wxs模块中引用其他-wxs-文件模块，可以使用-require-函数" class="headerlink" title="在.wxs模块中引用其他 wxs 文件模块，可以使用 require 函数"></a>在.wxs模块中引用其他 wxs 文件模块，可以使用 require 函数</h5><ul>
+<li>引用的时候，要注意如下几点：<ul>
+<li>只能引用 .wxs 文件模块，且必须使用相对路径。</li>
+<li>wxs 模块均为单例，wxs 模块在第一次被引用时，会自动初始化为单例对象。多个页面，多个地方，多次引用，使用的都是同一个 wxs 模块对象。</li>
+<li>如果一个 wxs 模块在定义之后，一直没有被引用，则该模块不会被解析与运行</li>
 </ul>
 </li>
-<li>结束，可以去看你的博客啦</li>
+<li>了解更多，参照小程序官方文档<ul>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxs/" target="_blank" rel="noopener">To Learn More…</a></li>
+</ul>
+</li>
 </ul>
 
       
@@ -361,6 +375,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/微信小程序视图层实现filter过滤/" rel="tag"># 微信小程序视图层实现filter过滤</a>
+          
+        </div>
+      
 
       
       
@@ -370,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/03/小程序引入iconfont踩坑/" rel="next" title="小程序引入iconfont踩坑">
-                <i class="fa fa-chevron-left"></i> 小程序引入iconfont踩坑
+              <a href="/2020/09/02/小程序兼容性/" rel="next" title="微信小程序兼容性">
+                <i class="fa fa-chevron-left"></i> 微信小程序兼容性
               </a>
             
           </div>
@@ -379,10 +399,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/04/小程序踩坑/" rel="prev" title="小程序踩坑">
-                小程序踩坑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -516,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建blog"><span class="nav-number">1.</span> <span class="nav-text">新建blog</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#场景应用"><span class="nav-number">1.</span> <span class="nav-text">场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#实现方式"><span class="nav-number">1.1.</span> <span class="nav-text">实现方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在-wxs模块中引用其他-wxs-文件模块，可以使用-require-函数"><span class="nav-number">1.2.</span> <span class="nav-text">在.wxs模块中引用其他 wxs 文件模块，可以使用 require 函数</span></a></li></ol></li></ol></div>
             
 
           </div>
