@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="数组去重1234##### 简单数组去重， 如：uniq([1, 3, 5, 3, 1])* 利用ES6新增数据类型 Set  * Set类似于数组，但是成员的值都是唯一的，没有重复的值。 function uniq(arry) {  return […new Set(arry)];}1* indexOf function uniq(arry) {    var result = [];    f">
+<meta name="description" content="dva+umi理解dva why dva？ redux数据流的控制可以让应用更控，让逻辑更清晰 redux同时会有的疑问？概念太多，并且reducer、saga、action都是分离的（文件分离 编辑成本高，需要在reducer、saga、action之间来回切换 不便于组织义务模型（domain models），如：每个模块功能，需要复制很多文件 saga书写复杂，每监听一个action都要走f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单的函数方法">
-<meta property="og:url" content="http://yoursite.com/2020/04/28/数组去重/index.html">
+<meta property="og:title" content="dva+umi">
+<meta property="og:url" content="http://yoursite.com/2021/01/14/dva-umi/index.html">
 <meta property="og:site_name" content="Shero.">
-<meta property="og:description" content="数组去重1234##### 简单数组去重， 如：uniq([1, 3, 5, 3, 1])* 利用ES6新增数据类型 Set  * Set类似于数组，但是成员的值都是唯一的，没有重复的值。 function uniq(arry) {  return […new Set(arry)];}1* indexOf function uniq(arry) {    var result = [];    f">
+<meta property="og:description" content="dva+umi理解dva why dva？ redux数据流的控制可以让应用更控，让逻辑更清晰 redux同时会有的疑问？概念太多，并且reducer、saga、action都是分离的（文件分离 编辑成本高，需要在reducer、saga、action之间来回切换 不便于组织义务模型（domain models），如：每个模块功能，需要复制很多文件 saga书写复杂，每监听一个action都要走f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-02T08:41:39.876Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/yongfeng-peng/yongfeng-peng.github.io/dev/source/images/dva.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yongfeng-peng/yongfeng-peng.github.io/dev/source/images/dva-lc.png">
+<meta property="og:updated_time" content="2021-01-17T03:40:12.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单的函数方法">
-<meta name="twitter:description" content="数组去重1234##### 简单数组去重， 如：uniq([1, 3, 5, 3, 1])* 利用ES6新增数据类型 Set  * Set类似于数组，但是成员的值都是唯一的，没有重复的值。 function uniq(arry) {  return […new Set(arry)];}1* indexOf function uniq(arry) {    var result = [];    f">
+<meta name="twitter:title" content="dva+umi">
+<meta name="twitter:description" content="dva+umi理解dva why dva？ redux数据流的控制可以让应用更控，让逻辑更清晰 redux同时会有的疑问？概念太多，并且reducer、saga、action都是分离的（文件分离 编辑成本高，需要在reducer、saga、action之间来回切换 不便于组织义务模型（domain models），如：每个模块功能，需要复制很多文件 saga书写复杂，每监听一个action都要走f">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yongfeng-peng/yongfeng-peng.github.io/dev/source/images/dva.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/28/数组去重/">
+  <link rel="canonical" href="http://yoursite.com/2021/01/14/dva-umi/">
 
 
 
 
 
-  <title>简单的函数方法 | Shero.</title>
+  <title>dva+umi | Shero.</title>
   
 
 
@@ -268,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/28/数组去重/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/14/dva-umi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongfeng.peng">
@@ -285,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">简单的函数方法</h1>
+          <h1 class="post-title" itemprop="name headline">dva+umi</h1>
         
 
         <div class="post-meta">
@@ -297,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-28T10:19:51+08:00">
-                2020-04-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-14T14:28:46+08:00">
+                2021-01-14
               </time>
             
 
@@ -320,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JS/" itemprop="url" rel="index">
-                    <span itemprop="name">JS</span>
+                  <a href="/categories/前端框架/" itemprop="url" rel="index">
+                    <span itemprop="name">前端框架</span>
                   </a>
                 </span>
 
@@ -357,16 +360,34 @@
       
 
       
-        <h4 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">##### 简单数组去重， 如：uniq([1, 3, 5, 3, 1])</span><br><span class="line"></span><br><span class="line">* 利用ES6新增数据类型 Set</span><br><span class="line">  * Set类似于数组，但是成员的值都是唯一的，没有重复的值。</span><br></pre></td></tr></table></figure>
-<p>function uniq(arry) {<br>  return […new Set(arry)];<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* indexOf</span><br></pre></td></tr></table></figure></p>
-<p>function uniq(arry) {<br>    var result = [];<br>    for (var i = 0; i &lt; arry.length; i++) {<br>        if (result.indexOf(arry[i]) === -1) {<br>            //如 result 中没有 arry[i],则添加到数组中<br>            result.push(arry[i])<br>        }<br>    }<br>    return result;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* includes</span><br></pre></td></tr></table></figure></p>
-<p>function uniq(arry) {<br>    var result = [];<br>    for (var i = 0; i &lt; arry.length; i++) {<br>        if (!result.includes(arry[i])) {<br>            //如 result 中没有 arry[i],则添加到数组中<br>            result.push(arry[i])<br>        }<br>    }<br>    return result;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* reduce</span><br></pre></td></tr></table></figure></p>
-<p>function uniq(arry) {<br>    return arry.reduce((prev, cur) =&gt; prev.includes(cur) ? prev : […prev, cur], []);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* Map</span><br></pre></td></tr></table></figure></p>
-<p>function uniq(arry) {<br>    let map = new Map();<br>    let result = new Array();<br>    for (let i = 0; i &lt; arry.length; i++) {<br>        if (map.has(arry[i])) {<br>            map.set(arry[i], true);<br>        } else {<br>            map.set(arry[i], false);<br>            result.push(arry[i]);<br>        }<br>    }<br>    return result;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### flat</span><br><span class="line">* 利用Array.prototype.flat</span><br><span class="line">* ES6 为数组实例新增了 flat方法，用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数组没有影响。</span><br><span class="line">* flat默认只会 “拉平” 一层，如果想要 “拉平” 多层的嵌套数组，需要给 `flat` 传递一个整数，表示想要拉平的层数。</span><br></pre></td></tr></table></figure></p>
-<p>function flattenDeep(arr, deepLength) {<br>    return arr.flat(deepLength);<br>}<br>console.log(flattenDeep([1, [2, [3, [4]], 5]], 3));<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 当传递的整数大于数组嵌套的层数时，会将数组拉平为一维数组，JS能表示的最大数字为 Math.pow(2, 53) - 1，因此我们可以这样定义 flattenDeep 函数</span><br></pre></td></tr></table></figure></p>
-<p>function flattenDeep(arr) {<br>    //当然，大多时候我们并不会有这么多层级的嵌套<br>    return arr.flat(Math.pow(2,53) - 1);<br>}<br>console.log(flattenDeep([1, [2, [3, [4]], 5]]));<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 利用 reduce 和 concat</span><br></pre></td></tr></table></figure></p>
-<p>function flattenDeep(arr){<br>    return arr.reduce((acc, val) =&gt; Array.isArray(val) ?<br>                  acc.concat(flattenDeep(val)) : acc.concat(val), []);<br>}<br>console.log(flattenDeep([1, [2, [3, [4]], 5]]));<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 使用 stack 无限反嵌套多层嵌套数组</span><br></pre></td></tr></table></figure></p>
-<p>function flattenDeep(input) {<br>    const stack = […input];<br>    const res = [];<br>    while (stack.length) {<br>        // 使用 pop 从 stack 中取出并移除值<br>        const next = stack.pop();<br>        if (Array.isArray(next)) {<br>            // 使用 push 送回内层数组中的元素，不会改动原始输入 original input<br>            stack.push(…next);<br>        } else {<br>            res.push(next);<br>        }<br>    }<br>    // 使用 reverse 恢复原数组的顺序<br>    return res.reverse();<br>}<br>console.log(flattenDeep([1, [2, [3, [4]], 5]]));<br><code>`</code></p>
+        <h3 id="dva-umi理解"><a href="#dva-umi理解" class="headerlink" title="dva+umi理解"></a>dva+umi理解</h3><h4 id="dva"><a href="#dva" class="headerlink" title="dva"></a><a href="https://dvajs.com/" target="_blank" rel="noopener">dva</a></h4><ul>
+<li><a href="https://github.com/dvajs/dva/issues/1" target="_blank" rel="noopener">why dva？</a></li>
+<li>redux数据流的控制可以让应用更控，让逻辑更清晰</li>
+<li>redux同时会有的疑问？概念太多，并且reducer、saga、action都是分离的（文件分离<ul>
+<li>编辑成本高，需要在reducer、saga、action之间来回切换</li>
+<li>不便于组织义务模型（domain models），如：每个模块功能，需要复制很多文件</li>
+<li>saga书写复杂，每监听一个action都要走fork -&gt; watcher -&gt; worker流程</li>
+<li>entry书写麻烦</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/dvajs/dva/issues/1" target="_blank" rel="noopener">what’s dva?</a></p>
+<ul>
+<li>dva是基于现有应用框架(redux + redux-saga + react-router等)的轻量封装，没有引入任何新的概念</li>
+<li>dva是framework，不是library，类似emberjs，会明确的告诉你每个部件应该怎么写，对于团队而言，会更可控。除了react和rect-dom是peerDependencies以外，dva封装了所有其它依赖</li>
+<li>dva实现上尽量不创建新语法，而是依赖库本身的语法</li>
+<li><p>dva的核心是提供了app.model方法，用于把reducer、initialState、saga、action封装到一起</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">app.model(&#123;</span><br><span class="line">  namespace: &apos;products&apos;,</span><br><span class="line">  state: &#123;</span><br><span class="line">    list: [],</span><br><span class="line">    loading: false,</span><br><span class="line">  &#125;,</span><br><span class="line">  subscriptions: [</span><br><span class="line">    function(dispatch) &#123;</span><br><span class="line">      dispatch(&#123;type: &apos;products/query&apos;&#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  effects: &#123;</span><br><span class="line">    [&apos;products/query&apos;]: function*() &#123;</span><br><span class="line">      yield call(delay(800));</span><br><span class="line">      yield put(&#123;</span><br><span class="line">        type: &apos;products/query/success&apos;,</span><br><span class="line">        payload: [&apos;ant-tool&apos;, &apos;roof&apos;],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  reducers: &#123;</span><br><span class="line">    [&apos;products/query&apos;](state) &#123;</span><br><span class="line">      return &#123; ...state, loading: true, &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    [&apos;products/query/success&apos;](state, &#123; payload &#125;) &#123;</span><br><span class="line">      return &#123; ...state, loading: false, list: payload &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>维护简单、提高开发效率</p>
+</li>
+<li>对原有知识点组合，对API对使用</li>
+</ul>
+</li>
+</ul>
+<h4 id="umi"><a href="#umi" class="headerlink" title="umi"></a><a href="https://umijs.org/zh-CN/docs" target="_blank" rel="noopener">umi</a></h4><ul>
+<li>dva+umi关系<br><img src="https://raw.githubusercontent.com/yongfeng-peng/yongfeng-peng.github.io/dev/source/images/dva.png" alt="Image text"></li>
+<li><a href="https://github.com/yongfeng-peng/dva-umi-ts-antd.git" target="_blank" rel="noopener">dva+umi数据共享</a><br><img src="https://raw.githubusercontent.com/yongfeng-peng/yongfeng-peng.github.io/dev/source/images/dva-lc.png" alt="Image text"></li>
+</ul>
 
       
     </div>
@@ -391,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/24/js监听事件/" rel="next" title="js监听事件">
-                <i class="fa fa-chevron-left"></i> js监听事件
+              <a href="/2021/01/14/typescript/" rel="next" title="typescript">
+                <i class="fa fa-chevron-left"></i> typescript
               </a>
             
           </div>
@@ -400,10 +421,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/26/CSS经典布局/" rel="prev" title="CSS经典布局">
-                CSS经典布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -537,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组去重"><span class="nav-number">1.</span> <span class="nav-text">数组去重</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#dva-umi理解"><span class="nav-number">1.</span> <span class="nav-text">dva+umi理解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dva"><span class="nav-number">1.1.</span> <span class="nav-text">dva</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#umi"><span class="nav-number">1.2.</span> <span class="nav-text">umi</span></a></li></ol></li></ol></div>
             
 
           </div>
